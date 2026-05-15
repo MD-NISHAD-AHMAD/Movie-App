@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+/* Heading */
+.main-heading {
+  text-align: center;
+  padding: 20px;
+  font-size: 36px;
+  background: white;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#searchInput {
+  width: 320px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #555;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Movie Grid */
+#movie {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+/* Card */
+.card-div {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card-div:hover {
+  transform: translateY(-8px);
+}
+
+.card-div img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-div h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.card-div p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.modal-content {
+  background: white;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.details-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.details-container img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.details-info {
+  flex: 1;
+}
+
+.details-info h2 {
+  margin-bottom: 10px;
+}
+
+.details-info p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-container img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
